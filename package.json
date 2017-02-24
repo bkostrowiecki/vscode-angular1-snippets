@@ -1,0 +1,39 @@
+{
+    "name": "ngMetadata TypeScript Snippets",
+    "publisher": "bkostrowiecki",
+    "displayName": "ngMetadata TypeScript Snippets",
+    "description": "ngMetadata with TypeScript snippets. This extension upports ngMetadata equal or greater than 4.0.0.",
+    "icon": "images/ngmetadata-shield.png",
+    "galleryBanner": {
+        "color": "#0273D4",
+        "theme": "dark"
+    },
+    "license": "SEE LICENSE IN LICENSE.md",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/bkostrowiecki/vscode-angular1-snippets.git"
+    },
+    "keywords" : [
+        "NgMetadata",
+        "AngularJS",
+        "Angular",
+        "Angular v2",
+        "Angular2",
+        "TypeScript"
+    ],
+    "version": "0.1.0",
+    "engines": {
+        "vscode": "0.10.x"
+    },
+    "categories": [
+        "Snippets"
+    ],
+    "contributes": {
+        "snippets": [
+            {
+                "language": "typescript",
+                "path": "./snippets/typescript.json"
+            }
+        ]
+    }
+}

@@ -1,0 +1,96 @@
+{
+	"ngMetadata bootstrapping": {
+		"prefix": "ng-bootstrap",
+		"body": [
+			"import { enableProdMode } from 'ng-metadata/core';",
+			"import { bootstrap } from 'ng-metadata/platform';",
+			"import { ${1:rootModuleName}Module } from './${2:pathToRootModule}';",
+			"",
+			"// enableProdMode();",
+			"",
+			"bootstrap( ${1:rootModuleName}Module );",
+			""
+		],
+		"description": "ngMetadata boostrapping snippet"
+	},
+	"ngMetadata Component": {
+		"prefix": "ng-component",
+		"body": [
+			"import { ${1:feature}Component, OnInit } from 'ng-metadata/core';",
+			"",
+			"@Component({",
+			    "\tselector: '${2:selector}',",
+			    "\ttemplate: `${3:template}`",
+			"})",
+			"export class ${1:feature}Component implements OnInit {",
+			    "\tconstructor() { }",
+			    "\t",
+			    "\tngOnInit() { }",
+			    "\t${4:end}",
+			"}",
+			""
+		],
+		"description": "ngMetadata component snippet"
+	},
+	"ngMetadata Directive": {
+		"prefix": "ng-directive",
+		"description": "ngMetadata Directive snippet",
+		"body": [
+			"import { ngModule } from 'ng-metadata/core';",
+			"",
+			"@Directive({",
+			    "\tselector: '[${2:prefix}${3:selector}]'",
+			"})",
+			"export class ${1:name}Directive implements OnInit {",
+			    "c\tonstructor() { }",
+				"",
+			    "\tngOnInit() { }",
+			    "\t${4:end}",
+			"}",
+			""
+		]
+	},
+	"ngMetadata Module": {
+    	"prefix": "ng-module",
+    	"description": "ngMetadata Module snippet",
+    	"body": [
+      		"@NgModule({",
+  				"\timports: [${2:imports}],",
+  				"\tdeclarations: [${3:declarations}]",
+  				"\tproviders: [${4:providers}],",
+			"})",
+			"export class ${1:feature}Module {}",
+			""
+    	]
+	},
+	"ngMetadata Service": {
+		"prefix": "ng-service",
+		"description": "NgMetadata Service",
+		"body": [
+			"import { Injectable } from 'ng-metadata/core';",
+			"",
+			"@Injectable()"
+			"export class ${1:feature}Service {"
+			    "\tconstructor(${2:injections}) { }"
+			"}",
+			""
+		]
+	},
+	"ngMetadata Pipe": {
+		"prefix": "ng-pipe",
+		"description": "NgMetadata Pipe",
+		"body": [
+			"import { Pipe, PipeTransform } from 'ng-metadata/core';",
+			"",
+			"@Pipe({",
+			    "\tname: '${1:name}'",
+			"})",
+			"export class ${1:name}Pipe implements PipeTransform {",
+			    "\ttransform(value: any, args: any[]): any {",
+			        "\t\t${2:end}",
+			    "\t}",
+			"}",
+			""
+		]
+	}
+}
