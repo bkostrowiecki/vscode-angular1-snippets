@@ -16,7 +16,7 @@
 	"ngMetadata Component": {
 		"prefix": "ng-component",
 		"body": [
-			"import { ${1:feature}Component, OnInit } from 'ng-metadata/core';",
+			"import { Component, OnInit } from 'ng-metadata/core';",
 			"",
 			"@Component({",
 			    "\tselector: '${2:selector}',",
@@ -24,7 +24,7 @@
 			"})",
 			"export class ${1:feature}Component implements OnInit {",
 			    "\tconstructor() { }",
-			    "\t",
+			    "",
 			    "\tngOnInit() { }",
 			    "\t${4:end}",
 			"}",
@@ -42,7 +42,7 @@
 			    "\tselector: '[${2:prefix}${3:selector}]'",
 			"})",
 			"export class ${1:name}Directive implements OnInit {",
-			    "c\tonstructor() { }",
+			    "\tconstructor() { }",
 				"",
 			    "\tngOnInit() { }",
 			    "\t${4:end}",
@@ -54,6 +54,8 @@
     	"prefix": "ng-module",
     	"description": "ngMetadata Module snippet",
     	"body": [
+    		"import { NgModule } from 'ng-metadata/core'",
+    		"",
       		"@NgModule({",
   				"\timports: [${2:imports}],",
   				"\tdeclarations: [${3:declarations}]",
