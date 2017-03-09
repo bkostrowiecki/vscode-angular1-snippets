@@ -4,11 +4,11 @@
 		"body": [
 			"import { enableProdMode } from 'ng-metadata/core';",
 			"import { bootstrap } from 'ng-metadata/platform';",
-			"import { ${1:rootModuleName}Module } from './${2:pathToRootModule}';",
+			"import { ${1:Root}Module } from './${2:pathToRootModule}';",
 			"",
 			"// enableProdMode();",
 			"",
-			"bootstrap( ${1:rootModuleName}Module );",
+			"bootstrap( ${1:Root}Module );",
 			""
 		],
 		"description": "ngMetadata boostrapping snippet"
@@ -26,7 +26,7 @@
 			    "\tconstructor() { }",
 			    "",
 			    "\tngOnInit() { }",
-			    "\t${4:end}",
+			    "\t${4}",
 			"}",
 			""
 		],
@@ -39,13 +39,13 @@
 			"import { ngModule } from 'ng-metadata/core';",
 			"",
 			"@Directive({",
-			    "\tselector: '[${2:prefix}${3:selector}]'",
+			    "\tselector: '[${2:selector}]'",
 			"})",
 			"export class ${1:name}Directive implements OnInit {",
 			    "\tconstructor() { }",
 				"",
 			    "\tngOnInit() { }",
-			    "\t${4:end}",
+			    "\t${4}",
 			"}",
 			""
 		]
@@ -57,9 +57,9 @@
     		"import { NgModule } from 'ng-metadata/core'",
     		"",
       		"@NgModule({",
-  				"\timports: [${2:imports}],",
-  				"\tdeclarations: [${3:declarations}]",
-  				"\tproviders: [${4:providers}],",
+  				"\timports: [${2}],",
+  				"\tdeclarations: [${3}]",
+  				"\tproviders: [${4}],",
 			"})",
 			"export class ${1:feature}Module {}",
 			""
@@ -73,7 +73,7 @@
 			"",
 			"@Injectable()"
 			"export class ${1:feature}Service {"
-			    "\tconstructor(${2:injections}) { }"
+			    "\tconstructor(${2}) { }"
 			"}",
 			""
 		]
@@ -89,7 +89,7 @@
 			"})",
 			"export class ${1:name}Pipe implements PipeTransform {",
 			    "\ttransform(value: any, args: any[]): any {",
-			        "\t\t${2:end}",
+			        "\t\t${2}",
 			    "\t}",
 			"}",
 			""
